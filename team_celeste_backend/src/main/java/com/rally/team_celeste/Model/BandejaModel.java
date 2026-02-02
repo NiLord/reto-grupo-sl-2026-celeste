@@ -21,11 +21,12 @@ public class BandejaModel {
     @ManyToOne
     @JoinColumn(name = "denominacion", nullable = false)
     private DenominacionesModel denominacion;
-    public BandejaModel(Long id, int cantidad, DenominacionesModel denominacion) {
+    
+    /*public BandejaModel(Long id, int cantidad, DenominacionesModel denominacion) {
         this.id = id;
         this.cantidad = cantidad;
         this.denominacion = denominacion;
-    }
+    }*/
     public Long getId() {
         return id;
     }
