@@ -1,16 +1,12 @@
-import ProductCard from './ProductCard';
-
-export default function ProductList({ products, onBuy }) {
+export default function ProductCard({ product, onBuy }) {
   return (
-    <div>
-      <h2>Productos</h2>
-      {products.map(product => (
-        <ProductCard
-          key={product.id}
-          product={product}
-          onBuy={onBuy}
-        />
-      ))}
+    <div style={{ border: "1px solid #ccc", marginBottom: "10px", padding: "10px" }}>
+      <h4>{product.name}</h4>
+      <p>Precio: ${product.price.toFixed(2)}</p>
+
+      <button onClick={() => onBuy(product)}>
+        Añadir
+      </button>
     </div>
   );
 }

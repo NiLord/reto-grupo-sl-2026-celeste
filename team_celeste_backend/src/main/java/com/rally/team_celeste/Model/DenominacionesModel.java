@@ -19,11 +19,11 @@ public class DenominacionesModel {
     @Column(name = "valor", nullable = false)
     private double valor;
 
-    public DenominacionesModel(Long id, String nombre, double valor) {
+    /*public DenominacionesModel(Long id, String nombre, double valor) {
         this.id = id;
         this.nombre = nombre;
         this.valor = valor;
-    }
+    }*/
 
     public Long getId() {
         return id;
