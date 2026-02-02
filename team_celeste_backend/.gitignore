@@ -31,3 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
+
+team_celeste_backend/src/main/resources/application.yaml

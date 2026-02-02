@@ -5,6 +5,13 @@ import BottomCash from "../componentes/bottom_cash";
 export default function Vending() {
   const [money, setMoney] = useState(0);
 
+ useEffect(() => {
+    fetch("http://localhost:8080/products") // URL luego se cambia
+      .then(res => res.json())
+      .then(data => setProducts(data))
+      .finally(() => setLoading(false));
+  }, []);
+
   const products = [
     { id: 1, name: "Coca Cola", price: 1.5 },
     { id: 2, name: "Pepsi", price: 1.4 },

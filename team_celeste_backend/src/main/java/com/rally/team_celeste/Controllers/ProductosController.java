@@ -25,5 +25,35 @@ public class ProductosController {
     public List<ProductosModel> getProductList(){
         return productosRepo.findAll();
     }
+
+    @PutMapping("/comprar/productos")
+    public List<ProductosModel> putProductosActualizados(@RequestBody List<ProductosModel> productosParaActualizar) {
+
+        ProductosModel productoActualizado;
+
+        for (ProductosModel producto : productosParaActualizar) {
+            productoActualizado = productosRepo.findById(producto.getId()).get();
+
+            productoActualizado.setCantidad(producto.getCantidad());
+
+            productosRepo.save(productoActualizado);
+        }
+        
+        return productosRepo.findAll();
+    }
+    /*
+    @PutMapping("/update/{id}")
+    public String updateUser(@PathVariable long id, @RequestBody User user){
+        User updatedUser = userRepo.findById(id).get();
+
+        updatedUser.setAge(user.getAge());
+        updatedUser.setFirstName(user.getFirstName());
+        updatedUser.setLastName(user.getLastName());
+        updatedUser.setOccupation(user.getOccupation());
+
+        userRepo.save(updatedUser);
+        return "Updated";
+    }
     
+    */
 }

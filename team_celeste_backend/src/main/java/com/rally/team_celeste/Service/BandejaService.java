@@ -20,4 +20,16 @@ public class BandejaService {
     public List<BandejaModel> obtenerTodos(){
         return bandejaRepository.findAll();
     }
+
+    //Buscar por id
+    public BandejaModel findById(Long id){
+        return bandejaRepository.findById(id).orElseThrow(() -> new RuntimeException("Denominación no encontrada"));
+    }
+
+    //Actualizar cantidad de bandeja
+    public BandejaModel actualizarCantidad(Long id, Integer cantidad){
+        BandejaModel bandeja = findById(id);
+        bandeja.setCantidad(cantidad);
+        return bandejaRepository.save(bandeja);
+    }
 }
