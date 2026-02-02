@@ -11,7 +11,19 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@Rest
+import com.rally.team_celeste.Model.ProductosModel;
+import com.rally.team_celeste.Repo.ProductosRepo;
+import org.springframework.web.bind.annotation.RequestParam;
+
+
+@RestController
 public class ProductosController {
+    @Autowired
+    private ProductosRepo productosRepo;
+
+    @GetMapping("/productos")
+    public List<ProductosModel> getProductList(){
+        return productosRepo.findAll();
+    }
     
 }
