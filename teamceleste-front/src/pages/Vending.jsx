@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import { getProducts } from '../services/vendingService';
-import ProductList from '../components/ProductList';
-import MoneyPanel from '../components/MoneyPanel';
+import ProductList from '../componentes/ProductList';
+import MoneyPanel from '../componentes/MoneyPanel';
 
 export default function VendingMachine() {
   const [products, setProducts] = useState([]);
