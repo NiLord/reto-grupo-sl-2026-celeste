@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ProductList from "../componentes/ProductList";
 import MoneyPanel from "../componentes/MoneyPanel";
-
+import BottomCash from "../componentes/bottom_cash";
 export default function Vending() {
   const [money, setMoney] = useState(0);
 
@@ -42,4 +42,6 @@ export default function Vending() {
       <MoneyPanel money={money} onAddMoney={addMoney} />
     </div>
   );
+ 
+  
 }
