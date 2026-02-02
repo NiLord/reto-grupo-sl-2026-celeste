@@ -5,7 +5,7 @@ export default function ProductCard({ product, onBuy }) {
       <p>Precio: ${product.price.toFixed(2)}</p>
 
       <button onClick={() => onBuy(product)}>
-        Comprar
+        Añadir
       </button>
     </div>
   );
