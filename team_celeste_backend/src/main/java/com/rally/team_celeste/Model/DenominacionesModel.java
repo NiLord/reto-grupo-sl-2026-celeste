@@ -12,23 +12,24 @@ import jakarta.persistence.Table;
 public class DenominacionesModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Column(name = "denominacion_id")
+    private Long id;
     @Column(name = "nombre", nullable = false)
     private String nombre;
     @Column(name = "valor", nullable = false)
     private double valor;
 
-    public DenominacionesModel(int id, String nombre, double valor) {
+    public DenominacionesModel(Long id, String nombre, double valor) {
         this.id = id;
         this.nombre = nombre;
         this.valor = valor;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
