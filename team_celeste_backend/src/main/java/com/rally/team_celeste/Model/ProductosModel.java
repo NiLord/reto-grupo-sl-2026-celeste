@@ -20,13 +20,6 @@ public class ProductosModel {
     private double precio;
     @Column(name = "cantidad", nullable = false)
     private int cantidad;
-
-    public ProductosModel(Long id, String nombre, double precio, int cantidad) {
-        this.id = id;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.cantidad = cantidad;
-    }
     
     public Long getId() {
         return id;
