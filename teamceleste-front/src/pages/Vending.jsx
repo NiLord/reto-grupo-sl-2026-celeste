@@ -17,6 +17,18 @@ export default function Vending() {
     { id: 9, name: "Energizante", price: 2.0 }
   ];
 
+  const moneyValues = [
+    0.01, 
+    0.05, 
+    0.10, 
+    0.25,
+    1.00, 
+    5.00, 
+    10.00, 
+    20.00,
+    50.00
+  ];
+
   const addMoney = (amount) => {
     setMoney(prev => prev + amount);
   };
@@ -39,7 +51,10 @@ export default function Vending() {
       padding: "20px"
     }}>
       <ProductList products={products} onBuy={buyProduct} />
-      <MoneyPanel money={money} onAddMoney={addMoney} />
+      <div>
+        <MoneyPanel money={money} onAddMoney={addMoney} />
+        <BottomCash moneyValues={moneyValues} onAddMoney={addMoney} />
+      </div>
     </div>
   );
  
