@@ -1,3 +1,10 @@
 spring:
   application:
     name: team_celeste
+  datasource:
+    url: jdbc:mysql://localhost:3306/maquina?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 6740
+  jpa:
+    hibernate:
+      ddl-auto: update
