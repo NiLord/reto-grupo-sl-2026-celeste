@@ -43,8 +43,9 @@ export default function Vending() {
     }}>
       <ProductList products={products} onBuy={buyProduct} />
       <MoneyPanel money={money} onAddMoney={addMoney} />
+      <BottomCash></BottomCash>
     </div>
   );
  
   
-}
+} 
