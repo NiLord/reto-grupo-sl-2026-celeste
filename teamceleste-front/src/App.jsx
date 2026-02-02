@@ -1,4 +1,4 @@
-import Vending from './pages/Vending';
+import Vending from "./pages/Vending";
 
 function App() {
   return <Vending />;
