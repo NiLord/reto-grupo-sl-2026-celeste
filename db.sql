@@ -12,7 +12,8 @@ create table Productos (
 create table Denominaciones (
 	denominacion_id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
-    valor DECIMAL(10,2) NOT NULL
+    valor DECIMAL(10,2) NOT NULL,
+    tipo VARCHAR(50) NOT NULL
 );
 
 create table Bandeja (
@@ -34,17 +35,17 @@ values
 ("chicle", 1.50, 19),
 ("energizante", 2.50, 4);
 
-insert into Denominaciones (nombre, valor)
+insert into Denominaciones (nombre, valor, tipo)
 values
-("1.00",1),
-("5.00",5),
-("10.00",10),
-("20.00",20),
-("50.00",50),
-("0.50",0.50),
-("0.25",0.25),
-("0.10",0.10),
-("0.05",0.05);
+("1.00",1, "papel"),
+("5.00",5, "papel"),
+("10.00",10, "papel"),
+("20.00",20, "papel"),
+("50.00",50, "papel"),
+("0.50",0.50, "moneda"),
+("0.25",0.25, "moneda"),
+("0.10",0.10, "moneda"),
+("0.05",0.05, "moneda");
 
 insert into Bandeja (cantidad, denominacion)
 values
