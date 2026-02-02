@@ -41,19 +41,4 @@ public class ProductosController {
         
         return productosRepo.findAll();
     }
-    /*
-    @PutMapping("/update/{id}")
-    public String updateUser(@PathVariable long id, @RequestBody User user){
-        User updatedUser = userRepo.findById(id).get();
-
-        updatedUser.setAge(user.getAge());
-        updatedUser.setFirstName(user.getFirstName());
-        updatedUser.setLastName(user.getLastName());
-        updatedUser.setOccupation(user.getOccupation());
-
-        userRepo.save(updatedUser);
-        return "Updated";
-    }
-    
-    */
 }
