@@ -35,7 +35,7 @@ export default function MoneyPanel({ money, onAddMoney }) {
       <div className="section">
         <h3 style={{ marginTop: 2, marginBottom: 0 }}>Cambio</h3>
         <br />
-        <span style={{ fontWeight: 'bold' }}>A devolver: $0.00</span>
+        <span style={{ fontWeight: 'bold', marginRight: '50px' }}>A devolver: $0.00</span>
         <span>Piezas: 0</span>
         <p>El cambio se calcula usando las bandejas disponibles y el minimo numero de piezas</p>
         <br />
