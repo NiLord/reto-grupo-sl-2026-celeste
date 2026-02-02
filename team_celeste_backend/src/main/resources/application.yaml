@@ -3,13 +3,8 @@ spring:
     name: team_celeste
   datasource:
     url: jdbc:mysql://localhost:3306/maquina?useSSL=false&serverTimezone=UTC
-<<<<<<< HEAD
-    username: root
-    password: G!tc3so22
-=======
     username: app_user
     password: rally_preparativo1234
->>>>>>> 1993dec5b259d0ff9589ad4048b2d858e47f3f3f
   jpa:
     hibernate:
       ddl-auto: update
