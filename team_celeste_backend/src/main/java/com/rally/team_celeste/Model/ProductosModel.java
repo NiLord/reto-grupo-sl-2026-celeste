@@ -1,17 +1,23 @@
 package com.rally.team_celeste.Model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "Productos")
 public class ProductosModel {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "nombre", nullable = false)
     private String nombre;
+    @Column(name = "precio", nullable = false)
     private double precio;
+    @Column(name = "cantidad", nullable = false)
     private int cantidad;
 
     public ProductosModel(Long id, String nombre, double precio, int cantidad) {
