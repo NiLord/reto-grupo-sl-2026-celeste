@@ -14,12 +14,12 @@ import jakarta.persistence.Table;
 public class BandejaModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "bandeja_id")
     private Long id;
     @Column(name = "cantidad", nullable = false)
     private int cantidad;
-    @Column(name = "denominacion", nullable = false)
     @ManyToOne
-    @JoinColumn(name = "denominacion")
+    @JoinColumn(name = "denominacion", nullable = false)
     private DenominacionesModel denominacion;
     public BandejaModel(Long id, int cantidad, DenominacionesModel denominacion) {
         this.id = id;
